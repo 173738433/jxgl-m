@@ -1,5 +1,6 @@
 <template>
   <div class="MechanicalType">
+    <div class="warp"></div>
     <mt-header title="组织结构" fixed>
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>

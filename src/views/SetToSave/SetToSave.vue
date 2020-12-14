@@ -1,5 +1,6 @@
 <template>
   <div class="SetToSave">
+    <div class="warp"></div>
     <mt-header title="新增机械'" fixed>
       <router-link to="/" slot="left">
         <mt-button><i class="icon iconfont icon-category"></i></mt-button>

@@ -1,5 +1,6 @@
 <template>
   <div class="particulars">
+    <div class="warp"></div>
     <div class="header">
       <mt-header title="现场机械管理系统" fixed>
         <router-link to="/" slot="left">
