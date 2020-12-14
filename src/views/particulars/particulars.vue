@@ -1,5 +1,6 @@
 <template>
   <div class="particulars">
+    <div class="warp"></div>
     <div class="header">
       <div class="warp"></div>
       <mt-header title="现场机械管理系统" fixed>
