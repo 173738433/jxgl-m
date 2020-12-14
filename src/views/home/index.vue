@@ -20,7 +20,7 @@
     <div class="ipt">
       <input type="text" />
       <p class="ipt-l">待办事项</p>
-      <p class="ipt-r">待审核机械</p>
+      <p class="ipt-r">待审核机械</p>x
     </div>
     <div class="content">
       <div class="content-box" v-for="(item, index) in tableDate" :key="index">
@@ -58,7 +58,7 @@ export default {
     async getreportForm() {
       let analysisData = await getreportForm();
       this.tableDate = analysisData.data.result.content;
-      console.log(analysisData.data.result.content);
+      // console.log(analysisData.data.result.content);
     },
     Structure() {
       this.$router.push("/structure");
