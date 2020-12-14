@@ -115,7 +115,7 @@ export default {
       }
     }
     .content-child {
-      //   display: flex;
+      // display: flex;
       margin-top: 65px;
       margin-left: 40px;
       .box {

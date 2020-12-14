@@ -104,6 +104,7 @@ export default {
       this.childDate = res.data.result;
       console.log(this.childDate);
     },
+  
   },
   mounted() {
     this.getMechanical()
