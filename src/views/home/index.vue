@@ -1,6 +1,9 @@
 <template>
   <div class="App">
+<<<<<<< HEAD
     <nut-popup v-model="show" get-container=".App" />
+=======
+>>>>>>> e0621c81d4a1816f69fad51ff9b3b0b607758bb9
     <div class="warp"></div>
     <mt-header title="现场机械管理系统" fixed>
       <router-link to="/" slot="left">
@@ -21,7 +24,7 @@
     <div class="ipt">
       <input type="text" />
       <p class="ipt-l">待办事项</p>
-      <p class="ipt-r">待审核机械</p>
+      <p class="ipt-r">待审核机械</p>x
     </div>
     <div class="content">
       <div class="content-box" v-for="(item, index) in tableDate" :key="index">
@@ -60,7 +63,7 @@ export default {
     async getreportForm() {
       let analysisData = await getreportForm();
       this.tableDate = analysisData.data.result.content;
-      console.log(analysisData.data.result.content);
+      // console.log(analysisData.data.result.content);
     },
     Structure() {
       this.$router.push("/structure");

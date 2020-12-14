@@ -1,5 +1,6 @@
 <template>
   <div class="particulars">
+    <div class="warp"></div>
     <div class="header">
       <div class="warp"></div>
       <mt-header title="现场机械管理系统" fixed>
@@ -60,7 +61,7 @@
       </nut-popup>
     </div>
     <div class="footer">
-      <div class="footer-l">日常检查</div>
+      <div class="footer-l" @click="examineClick">日常检查</div>
       <div class="footer-m" @click="SetToSaveSkip">
         <mt-palette-button content="+" class="add">
           <div class="my-icon-button"></div>
@@ -83,9 +84,15 @@ export default {
     SetToSaveSkip() {
       this.$router.push("/SetToSave");
     },
+<<<<<<< HEAD
     showPopup() {
       this.show = true;
     },
+=======
+    examineClick() {
+      this.$router.push({path:'/examine'})
+    }
+>>>>>>> e0621c81d4a1816f69fad51ff9b3b0b607758bb9
   },
   mounted() {},
 };
