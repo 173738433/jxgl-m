@@ -14,6 +14,49 @@
       <div class="nav">
         <p>大北~大南<i class="icon iconfont icon-arrow-down-copy"></i></p>
       </div>
+      <nut-cell
+        isLink
+        title="展示弹出层"
+        @click.native="show = true"
+        :showIcon="true"
+      >
+        <i class="icon iconfont icon-category"></i>
+      </nut-cell>
+      <nut-popup
+        :style="{ width: '80%', height: '100%' }"
+        position="right"
+        v-model="show"
+      >
+        <div class="pop-up">
+          <dl>
+            <dt>状态</dt>
+            <dd>
+              <p>未申报</p>
+              <p>待审核</p>
+              <p>使用中</p>
+              <p>已停用</p>
+              <p>正在维修</p>
+              <p>已退场</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>属性</dt>
+            <dd>
+              <p>特种机械</p>
+              <p>大型机械</p>
+              <p>其他机械</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>来源</dt>
+            <dd>
+              <p>自由</p>
+              <p>租凭</p>
+              <p>分包自带</p>
+            </dd>
+          </dl>
+        </div>
+      </nut-popup>
     </div>
     <div class="footer">
       <div class="footer-l" @click="examineClick">日常检查</div>
@@ -31,15 +74,20 @@
 export default {
   name: "Particulars",
   data() {
-    return {};
+    return {
+      show: false,
+    };
   },
   methods: {
     SetToSaveSkip() {
       this.$router.push("/SetToSave");
     },
     examineClick() {
-      this.$router.push({path:'/examine'})
-    }
+      this.$router.push({ path: "/examine" });
+    },
+    showPopup() {
+      this.show = true;
+    },
   },
   mounted() {},
 };
@@ -70,6 +118,31 @@ i {
         font-size: 29px;
         margin-top: 53px;
         text-align: center;
+      }
+    }
+    .pop-up {
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      box-sizing: border-box;
+      dl {
+        dt {
+          margin-top: 50px;
+          font-size: 26px;
+        }
+        dd {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          p {
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #f5f7f4;
+            color: #000;
+            font-size: 25px;
+            margin-top: 40px;
+          }
+        }
       }
     }
   }
