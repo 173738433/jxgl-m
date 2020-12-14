@@ -103,7 +103,13 @@ i {
       color: #fff;
       font-size: 29px;
       margin-top: 53px;
+<<<<<<< HEAD
       text-align: center;
+=======
+      flex-shrink: 0;
+      text-align: center;
+      margin-top: 75px;
+>>>>>>> fc998b3ef7c8c489d609a9463fbe826217d7a294
     }
   }
 
@@ -111,6 +117,7 @@ i {
     width: 95%;
     height: 80px;
     margin: 0 auto;
+    margin-top: 20px;
     position: relative;
     input {
       width: 100%;
