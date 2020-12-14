@@ -1,5 +1,6 @@
 <template>
   <div class="mechanical">
+    <div class="warp"></div>
     <mt-header title="现场机械管理系统" fixed>
       <router-link to="/" slot="left">
         <mt-button><i class="icon iconfont icon-category"></i></mt-button>
@@ -103,6 +104,7 @@ export default {
       this.childDate = res.data.result;
       console.log(this.childDate);
     },
+  
   },
   mounted() {
     this.getMechanical()

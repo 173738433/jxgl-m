@@ -1,5 +1,6 @@
 <template>
   <div class="App">
+    <div class="warp"></div>
     <mt-header title="现场机械管理系统" fixed>
       <router-link to="/" slot="left">
         <mt-button><i class="icon iconfont icon-category"></i></mt-button>
@@ -77,6 +78,10 @@ export default {
   padding: 0;
   margin: 0;
 }
+.warp {
+  width: 100%;
+  height: 80px;
+}
 input,
 button {
   outline: none;
@@ -98,6 +103,10 @@ i {
       color: #fff;
       font-size: 29px;
       margin-top: 53px;
+      text-align: center;
+      flex-shrink: 0;
+      text-align: center;
+      margin-top: 75px;
     }
   }
 
@@ -105,6 +114,7 @@ i {
     width: 95%;
     height: 80px;
     margin: 0 auto;
+    margin-top: 20px;
     position: relative;
     input {
       width: 100%;

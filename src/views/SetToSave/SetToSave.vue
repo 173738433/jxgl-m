@@ -1,5 +1,6 @@
 <template>
   <div class="SetToSave">
+    <div class="warp"></div>
     <mt-header title="新增机械'" fixed>
       <router-link to="/" slot="left">
         <mt-button><i class="icon iconfont icon-category"></i></mt-button>
@@ -93,15 +94,15 @@ export default {
   name: "SetToSave",
   data() {
     return {
-        ChildDate:{}
+      ChildDate: {},
     };
   },
   methods: {
     async chooseType() {
         this.$router.push("/MechanicalType");
       let res = await postMechanicalType();
-    //   console.log(res);
-    //   this.ChildDate = res.data.result;
+      //   console.log(res);
+      //   this.ChildDate = res.data.result;
       this.$router.push({
         path: "/MechanicalType",
         ChildDate: { data: res.data.result },
@@ -192,6 +193,7 @@ i {
 
           span {
             margin-top: 15px;
+            margin-left: 55px;
             display: block;
             i {
               font-size: 44px;
@@ -240,5 +242,9 @@ i {
       }
     }
   }
+}
+.warp {
+  width: 100%;
+  height: 60px;
 }
 </style>
