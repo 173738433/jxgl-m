@@ -1,6 +1,7 @@
 <template>
   <div class="particulars">
     <div class="header">
+      <div class="warp"></div>
       <mt-header title="现场机械管理系统" fixed>
         <router-link to="/" slot="left">
           <mt-button><i class="icon iconfont icon-category"></i></mt-button>
@@ -16,7 +17,7 @@
     <div class="footer">
       <div class="footer-l">日常检查</div>
       <div class="footer-m" @click="SetToSaveSkip">
-        <mt-palette-button content="+" class="add" >
+        <mt-palette-button content="+" class="add">
           <div class="my-icon-button"></div>
         </mt-palette-button>
       </div>
@@ -64,6 +65,7 @@ i {
         color: #fff;
         font-size: 29px;
         margin-top: 53px;
+        text-align: center;
       }
     }
   }
@@ -92,7 +94,10 @@ i {
       left: 50%;
       transform: translate(-50%, -5%);
       .add {
-        margin-top: 30px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -5%);
       }
     }
     .footer-r {
@@ -102,5 +107,9 @@ i {
       line-height: 136px;
     }
   }
+}
+.warp {
+  width: 100%;
+  height: 40px;
 }
 </style>

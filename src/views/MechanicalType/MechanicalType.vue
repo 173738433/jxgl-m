@@ -1,5 +1,6 @@
 <template>
   <div class="MechanicalType">
+    <div class="warp"></div>
     <mt-header title="组织结构" fixed>
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
@@ -8,6 +9,7 @@
         <i class="icon iconfont icon-lingdang"></i>
       </mt-button>
     </mt-header>
+
     <div class="ipt-box">
       <input type="text" name="" id="" placeholder="搜索机械名称" />
     </div>
@@ -57,5 +59,9 @@ i {
       box-sizing: border-box;
     }
   }
+}
+.warp {
+  width: 100%;
+  height: 90px;
 }
 </style>
