@@ -98,6 +98,9 @@ i {
       color: #fff;
       font-size: 29px;
       margin-top: 53px;
+      flex-shrink: 0;
+      text-align: center;
+      margin-top: 75px;
     }
   }
 
@@ -105,6 +108,7 @@ i {
     width: 95%;
     height: 80px;
     margin: 0 auto;
+    margin-top: 20px;
     position: relative;
     input {
       width: 100%;
