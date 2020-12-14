@@ -19,8 +19,9 @@
     </div>
     <div class="ipt">
       <input type="text" />
-      <p class="ipt-l">待办事项</p>
-      <p class="ipt-r">待审核机械</p>x
+      <p class="ipt-l" @click="tiao">待办事项</p>
+      <p class="ipt-r">待审核机械</p>
+      x
     </div>
     <div class="content">
       <div class="content-box" v-for="(item, index) in tableDate" :key="index">
@@ -65,6 +66,9 @@ export default {
     },
     jump() {
       this.$router.push("/mechanical");
+    },
+    tiao() {
+      this.$router.push("/aaa");
     }
   },
   mounted() {
