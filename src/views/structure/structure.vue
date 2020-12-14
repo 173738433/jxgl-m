@@ -1,5 +1,6 @@
 <template>
   <div class="structure">
+    <div class="warp"></div>
     <mt-header title="组织结构" fixed>
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
@@ -23,7 +24,10 @@
         v-show="b"
       >
         <div class="box">
-          <i class="icon iconfont icon-shangjiantoushixin" @click="PackUpChild"></i>
+          <i
+            class="icon iconfont icon-shangjiantoushixin"
+            @click="PackUpChild"
+          ></i>
           <p class="child">{{ item.name }}</p>
         </div>
         <div
@@ -49,8 +53,8 @@ export default {
   data() {
     return {
       ChildDate: [],
-      b:true,
-      c:true
+      b: true,
+      c: true,
     };
   },
   async mounted() {
@@ -63,14 +67,14 @@ export default {
       console.log(this.ChildDate);
     },
     PackUp() {
-       this.b = !this.b
+      this.b = !this.b;
     },
     PackUpChild() {
-        this.c = !this.c
+      this.c = !this.c;
     },
     detailPage() {
-       this.$router.push("/particulars");
-    }
+      this.$router.push("/particulars");
+    },
   },
 };
 </script>
@@ -115,7 +119,7 @@ export default {
       margin-top: 65px;
       margin-left: 40px;
       .box {
-          display: flex;
+        display: flex;
         .title {
           font-size: 28px;
           display: flex;
@@ -136,5 +140,9 @@ export default {
       }
     }
   }
+}
+.warp {
+  width: 100%;
+  height: 60px;
 }
 </style>
