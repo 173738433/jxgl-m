@@ -98,7 +98,7 @@ export default {
   },
   methods: {
     async chooseType() {
-      //   this.$router.push("/MechanicalType");
+        this.$router.push("/MechanicalType");
       let res = await postMechanicalType();
     //   console.log(res);
     //   this.ChildDate = res.data.result;
