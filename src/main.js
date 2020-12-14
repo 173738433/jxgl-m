@@ -5,8 +5,11 @@ import store from './store'
 import Mint from 'mint-ui';
 import 'lib-flexible'
 import 'mint-ui/lib/style.css'
-Vue.use(Mint);
+import NutUI from '@nutui/nutui';
+import '@nutui/nutui/dist/nutui.css';
 
+NutUI.install(Vue);
+Vue.use(Mint);
 Vue.config.productionTip = false
 
 new Vue({
