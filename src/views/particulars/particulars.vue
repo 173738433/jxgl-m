@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="footer">
-      <div class="footer-l">日常检查</div>
+      <div class="footer-l" @click="examineClick">日常检查</div>
       <div class="footer-m" @click="SetToSaveSkip">
         <mt-palette-button content="+" class="add" >
           <div class="my-icon-button"></div>
@@ -35,6 +35,9 @@ export default {
     SetToSaveSkip() {
       this.$router.push("/SetToSave");
     },
+    examineClick() {
+      this.$router.push({path:'/examine'})
+    }
   },
   mounted() {},
 };
